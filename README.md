@@ -1,3 +1,15 @@
+# prjreactmintic
+This repository will contain the project that we must do for cycle 3 of MisiónTIC 2022. It is a project made in ReactJs and nodejs, while we advance with the project I will give more features of it.
+
+# Roles
+Jarizon Andres Lopez Lizarazo - Desarrollador.
+
+Yulissa Lopez Cortes - Product Owner
+
+Astrid Carolina De Angel Mancera - Administrador de BD.
+
+Luis Felipe Supelano Mesa - Scrum Master
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
