@@ -44,4 +44,8 @@ div.col-12{
 .imput{
     padding-right: calc(var(--bs-gutter-x) * 0.8);
     padding-left: calc(var(--bs-gutter-x) * 0.8);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> features

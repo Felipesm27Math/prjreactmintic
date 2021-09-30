@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+<<<<<<< HEAD
 //import './index.css';
 import App from './App';
 
+=======
+import App from './App';
+>>>>>>> features
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,3 +14,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+<<<<<<< HEAD
+=======
+
+>>>>>>> features
