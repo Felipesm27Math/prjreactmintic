@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+.cont-principal{
+    height: 90vh;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.funciones{
+    display:flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.funciones button{
+    width: 150px;
+    height: 50px;
+    background: white;
+    border: 2px solid purple;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Mulish', sans-serif;
+}
+
+.busqueda{
+    display: flex;
+    border: 1px solid yellow;
+    width: 350px;
+    border-radius:20px;
+    border: 2px solid purple;
+    height: 55px;
+    box-sizing: border-box;
+    
+}
+
+.busqueda input{
+    height: 45px;
+    width: 300px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    outline: none;
+    font-family: 'Mulish', sans-serif;
+}
+
+.busqueda i{
+    height: 50px;
+    width:50px;
+    background-color: purple;
+    color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+.tabla table{
+    width: 100%;
+}
+
+.tabla table, th, td {
+    border: 3px solid purple;
+  }
+
+.tabla table thead{
+    background-color: purple;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: 'Mulish', sans-serif;
+    border-color: black;
+
+}
+
+.tabla table tbody{
+    height: 50px;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: 'Mulish', sans-serif;
+}
