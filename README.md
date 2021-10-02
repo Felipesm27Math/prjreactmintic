@@ -1,6 +1,8 @@
 # prjreactmintic
 This repository will contain the project that we must do for cycle 3 of MisiónTIC 2022. It is a project made in ReactJs and nodejs, while we advance with the project I will give more features of it.
 
+# Equipo - Grupo 27
+
 # Roles
 Jarizon Andres Lopez Lizarazo - Desarrollador.
 
@@ -9,6 +11,16 @@ Yulissa Lopez Cortes - Product Owner
 Astrid Carolina De Angel Mancera - Administrador de BD.
 
 Luis Felipe Supelano Mesa - Scrum Master
+
+# Trello
+https://trello.com/b/qERh4CYl/proyecto-ciclo-3-grupo-27
+
+# Interfaces
+1. Interfaz de Usuario Oauth2: Esta interfaz está en proceso, es la interfaz de login en la que administradores y vendedores pueden acceder a a la aplicación. En ella se encuentra la opción para autenticarse con un tercero (Gmail).
+2. Maestro de productos: Crear interfaz del maestro de productos donde se pueda ver, buscar y actualizar los productos anteriormente ingresados, solo el maestro podrá obtener acceso a estas funcionalidades.
+3. Maestro de usuarios: Crear interfaz del maestro de usuarios donde se vera cada una de las personas en la base de datos como administrador y vendedor y el estado del usuario donde podremos cambiarlo de pendiente/ autorizado/ no autorizado.
+4. Registro de productos: Esta interfaz se encarga de registrar los productos que solicita el Id, la descripción, valor y disponibilidad del producto.
+5. Maestro de estado de venta: La interfaz de maestro de estado de ventas se podrá ver y/o actualizar el estado de venta de los productos es decir, si está en proceso, cancelada o entregada. Además, se puede modificar algunos campos como la fecha y el vendedor o responsable.
 
 # Getting Started with Create React App
 
