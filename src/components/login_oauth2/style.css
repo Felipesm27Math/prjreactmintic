@@ -8,8 +8,8 @@ h3 {
     margin-top: 25px;
     max-width: 350px;
     height: 280px;
-    border: 1.5px solid #4672d3;
-    background-color: #f9ffff;
+    border: 1.5px solid #3a4764;
+    background-color: #f3f3f3;
     border-radius: 0.5rem;
 }
 
@@ -20,7 +20,7 @@ div.col-12{
 }
 
 .form-label{
-    border: 1px solid #d8d8d8;
+    border: 1px solid #d8d4d4;
     border-radius: 0.3rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
@@ -44,4 +44,8 @@ div.col-12{
 .imput{
     padding-right: calc(var(--bs-gutter-x) * 0.8);
     padding-left: calc(var(--bs-gutter-x) * 0.8);
+}
+
+a{
+    margin-left: 2%;
 }
