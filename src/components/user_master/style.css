@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+.block__main{
+    height: 90vh;
+    padding: 40px;
+}
+
+.block__busqueda{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.block__busqueda h4{
+    font-size:28px;
+    font-weight: 500;
+    font-family: 'Mulish', sans-serif;
+    margin-bottom: 15px;
+}
+
+.block__busqueda select{
+    height: 40px;
+    width: 320px;
+    margin: 0;
+    border-radius: 20px;
+    border: 3px solid #40203A;
+    background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #40203A, #40203A);
+    background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+    background-size:
+    5px 5px,
+    5px 8px,
+    2.5em 3.5em;
+    background-repeat: no-repeat;
+    outline: none;
+    padding-left: 25px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+
+.block__tabla{
+    height: 80%;
+}
+
+.block__tabla table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.block__tabla table, th, td {
+    border: 3px solid #7595BF;
+  }
+
+.block__tabla table thead{
+    background-color: #7595BF;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: 'Mulish', sans-serif;
+    border-color: black;
+
+}
+
+.block__tabla table tbody{
+    height: 50px;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: 'Mulish', sans-serif;
+}
+
+.block__tabla table tbody td i{
+    cursor: pointer;
+}
