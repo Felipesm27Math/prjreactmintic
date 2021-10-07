@@ -45,7 +45,7 @@ function Login() {
         </div>
         <div class="createAccount">
           <p>
-            Continue with<a href="www.google.com"><i class="fab fa-google"></i></a>
+            Continue with<a target="_blank" rel="noreferrer" href="https://www.gmail.com"><i class="fab fa-google"></i></a>
           </p>
         </div>
       </div>
