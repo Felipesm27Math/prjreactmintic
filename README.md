@@ -6,9 +6,7 @@ This repository will contain the project that we must do for cycle 3 of MisiónT
 # Roles
 Jarizon Andres Lopez Lizarazo - Desarrollador.
 
-Yulissa Lopez Cortes - Product Owner
-
-Astrid Carolina De Angel Mancera - Administrador de BD.
+Yulissa Lopez Cortes - Product Owner.
 
 Luis Felipe Supelano Mesa - Scrum Master
 
