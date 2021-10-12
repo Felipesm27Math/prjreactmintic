@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../navbar/Navbar'
+import { Link } from 'react-router-dom'
 
 /*importar estilos*/ 
 import './style.css'
@@ -10,7 +11,9 @@ const Masterproduct = () => {
           <Navbar/>  
           <section className="cont-principal">
               <div className="funciones">
-                  <button type="submit"><i class="fas fa-plus"></i> New product</button>  
+                  <Link to="/product/new">
+                    <button type="submit"><i class="fas fa-plus"></i> New product</button> 
+                  </Link> 
                   <div className="busqueda">
                       <input type="text"/>
                       <i class="fas fa-search"></i>
