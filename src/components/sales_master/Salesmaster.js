@@ -1,10 +1,12 @@
 import React from 'react'
+import Navbar from '../navbar/Navbar'
 
 const Salesmaster = () => {
     return (
-        <div>
-            Sales Master Page
-        </div>
+        <>
+        <Navbar/>
+        Sales Master Page
+        </>
     )
 }
 

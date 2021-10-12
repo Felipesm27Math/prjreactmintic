@@ -1,5 +1,5 @@
 import React from 'react'
-import Menu from '../menu'
+import Navbar from '../navbar/Navbar'
 
 /*importar estilos*/ 
 import './style.css'
@@ -7,7 +7,7 @@ import './style.css'
 const Masterproduct = () => {
     return (
         <>
-          <Menu/>  
+          <Navbar/>  
           <section className="cont-principal">
               <div className="funciones">
                   <button type="submit"><i class="fas fa-plus"></i> New product</button>  
