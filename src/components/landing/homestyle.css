@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+:root{
+    --color-morado: #7b2cbf;
+    --color-morado-claro: #bdb2ff;
+}
+.principal_box{
+    display: flex;
+    height: 100vh;
+}
+
+.left_box, .right_box{
+    width: 50%;
+}
+
+.left_box{
+    background-image: url('../../img/wave.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_box img{
+    
+    width:700px; 
+    height: auto;
+    
+}
+
+.right_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.text_box{
+    width: 60%;
+    height: 35%;
+    text-align: center;
+}
+
+.text_box h3{
+    font-size: 70px;
+    font-family: 'Barlow', sans-serif;
+    color: var(--color-morado-claro);
+    margin-bottom: 25px;
+    border-bottom: 1px purple solid ;
+    padding: 10px;
+}
+
+.text_box p{
+    font-size: 17px;
+}
+
+.buton_box{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+.buton{
+    width: 180px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: var(--color-morado);
+    border: 1px solid var(--color-morado);
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+}
+
+.buton:hover{
+    background-color: transparent;
+    border: 3px solid var(--color-morado);
+    color: var(--color-morado);
+    cursor: pointer;
+}
+
