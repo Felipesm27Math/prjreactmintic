@@ -7,6 +7,7 @@ import Newproduct from "./components/product_register/Productregister";
 import Salesmaster from "./components/sales_master/Salesmaster";
 import Salesregister from "./components/sales_register/Salesregister";
 import Usermaster from "./components/user_master/Usermaster";
+import Home from "./components/landing/Home";
 //import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {} from '@fortawesome/free-solid-svg-icons'
 import {} from '@fortawesome/fontawesome-svg-core'
@@ -43,8 +44,15 @@ function App() {
             <Usermaster/>
           </Route>
 
-          <Route path="/">
-            <Login />
+          <Route path={['/', '/login']}>
+            <Switch>
+              <Route path='/login'>
+                <Login />
+              </Route>
+              <Route path='/'>
+                <Home />
+              </Route>
+            </Switch>
           </Route>
         </Switch>
       </Router>
