@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css'
+import {Link} from 'react-router-dom'
 
 function Login() {
   return (
@@ -29,15 +30,16 @@ function Login() {
                   <div class="imput">
                     <input type="password" class="form-label mt-1" />
                   </div>
-                  <div class="d-grid gap-3 col-9 mx-auto mt-4">
+                    <Link to="/product">
+                    <div class="d-grid gap-3 col-9 mx-auto mt-4">
                     <button
                       type="submit"
                       class="btn btn-outline-dark"
-                      id="btnSubmit"
-                    >
+                      id="btnSubmit">
                       Sign in
                     </button>
-                  </div>
+                    </div>
+                    </Link>
                 </div>
               </form>
             </div>
