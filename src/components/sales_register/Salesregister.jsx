@@ -1,4 +1,4 @@
-import {useState,React} from "react";
+import {React} from "react";
 import Menu from "../menu";
 
 import "../sales_register/style.css";
