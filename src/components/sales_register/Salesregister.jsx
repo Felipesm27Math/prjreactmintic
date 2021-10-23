@@ -1,7 +1,7 @@
 import {React} from "react";
 import Navbar from '../navbar/Navbar'
 
-import "../sales_register/style.css";
+import "./style.css";
 
 const Salesregister = () => {
     
@@ -10,7 +10,7 @@ const Salesregister = () => {
     <>
       <Navbar/>
       <main>
-        <section class="formulariocont">
+        <section class="formulario">
           <div class="row1">
             <div class="colum1">
               <div>
@@ -50,12 +50,12 @@ const Salesregister = () => {
                           <th>SubTotal</th>
                       </tr>
                       <tr>
-                          <td>Hello</td>
-                          <td>World</td>
+                          <td></td>
+                          <td></td>
                       </tr>
                   </table>
                 </div>
-                <button type="submit" class="btn-crear">
+                <button type="submit" class="btn-crear-sale">
                   New sale
                 </button>
               </form>

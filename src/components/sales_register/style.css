@@ -1,4 +1,4 @@
-.formulariocont {
+.formulario {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-.formulariocont .row1 {
+.formulario .row1 {
     display: flex;
     width: 100%;
     justify-content:space-between;
@@ -14,7 +14,7 @@
     height: 100vh;
 }
 
-.formulariocont .row1 .colum1{
+.formulario .row1 .colum1{
     display: flex;
     object-fit: cover;
     flex-direction: column;
@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-.formulariocont .row1 .colum2{
+.formulario .row1 .colum2{
     display: flex;
     object-fit:cover;
     flex-direction: column;
@@ -32,7 +32,7 @@
     align-items: center;
 }
 
-.formulariocont form{
+.formulario form{
     width: 50%;
     height: 90%;
     display: flex;
@@ -44,7 +44,7 @@
     align-items: center;
   }
 
-  .formulariocont form input{
+  .formulario form input{
     height:50px;
     width: 300px;
     border-radius: 15px;
@@ -59,11 +59,12 @@
 
   
   
-  .formulariocont form label{
+  .formulario form label{
     padding: 10px;
     font: bolder;
     font-size:larger;
     margin: 10px;
+    justify-content: center;
   }
 
   button {
@@ -87,6 +88,12 @@
   .containerTable{
       margin: 30px auto; 
       width: 100%;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .containerTable .label {
+      align-items: center;
   }
 
   table{
@@ -96,6 +103,7 @@
       border-collapse: collapse;
       width:100%;
       margin: 10px;
+      padding: 5px;
   }
 
   th, td{
