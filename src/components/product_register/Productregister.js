@@ -1,10 +1,10 @@
 import React from 'react'
-import Menu from '../menu'
+import Navbar from '../navbar/Navbar'
 import './style.css'
 const Newproduct = () => {
     return (
         <>
-            <Menu/>
+            <Navbar/>
             <section class="formulariocont">
                 <div class="cont-titulo">
                     <div class="titulo"><h4>New Product</h4></div>

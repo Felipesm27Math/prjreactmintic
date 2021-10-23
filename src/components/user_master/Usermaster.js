@@ -1,11 +1,11 @@
 import React from 'react';
-import Menu from '../menu';
+import Navbar from '../navbar/Navbar';
 import './style.css';
 
 const Usermaster = () => {
     return (
         <>
-          <Menu/> 
+          <Navbar/> 
           <section className="block__main">
             <div className="block__busqueda">
                 <h4>Que usuario deseas editar?</h4>

@@ -76,6 +76,7 @@
     font-size: 18px;
     text-transform: capitalize;
     font-family: 'Mulish', sans-serif;
+    text-align: center;
 }
 
 .block__tabla table tbody td i{
