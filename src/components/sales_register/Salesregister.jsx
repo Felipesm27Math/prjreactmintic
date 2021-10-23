@@ -1,5 +1,5 @@
 import {React} from "react";
-import Menu from "../menu";
+import Navbar from '../navbar/Navbar'
 
 import "../sales_register/style.css";
 
@@ -8,7 +8,7 @@ const Salesregister = () => {
 
   return (
     <>
-      <Menu />
+      <Navbar/>
       <main>
         <section class="formulariocont">
           <div class="row1">
