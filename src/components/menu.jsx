@@ -7,9 +7,9 @@ const Menu = () => {
                 <nav class="navbarra">
                 <h3>Titulo Proyecto</h3>
                 <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Registro</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="www.google.com">Home</a></li>
+                    <li><a href="www.google.com">Registro</a></li>
+                    <li><a href="www.google.com">Login</a></li>
                 </ul>
                 </nav>
             </header>  
