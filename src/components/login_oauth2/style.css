@@ -3,7 +3,7 @@ h3 {
     font-weight: 300; 
 }
 
-#login .container{
+.container{
     align-content: center;
     margin-top: 25px;
     max-width: 350px;
@@ -48,4 +48,8 @@ div.col-12{
 
 a{
     margin-left: 2%;
+}
+
+.button:hover{
+    transform: scale(1.1);
 }
