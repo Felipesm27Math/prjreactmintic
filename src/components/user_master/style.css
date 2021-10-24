@@ -19,6 +19,23 @@
     margin-bottom: 15px;
 }
 
+.cont-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn_crear{
+    margin: 0;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(99, 138, 247);
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+}
+
 .block__busqueda select{
     height: 40px;
     width: 320px;
@@ -73,7 +90,7 @@
 
 .block__tabla table tbody{
     height: 50px;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
     font-family: 'Mulish', sans-serif;
     text-align: center;
@@ -82,3 +99,39 @@
 .block__tabla table tbody td i{
     cursor: pointer;
 }
+
+.actions_style{
+    display: flex;
+    justify-content: space-around;
+    color: purple;
+}
+
+.formCont{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.formUser{
+    width: 30vw;
+    height: auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.formularioUsuarios{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+    
