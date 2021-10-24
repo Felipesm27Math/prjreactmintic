@@ -135,11 +135,48 @@
     flex-direction: column;
     height: 100%;
     justify-content: space-evenly;
-    border: 1px solid purple;
+    padding-left: 5px;
     
 }
 
 .formularioUsuarios h2{
     align-self: center;
+    font-family: 'Mulish', sans-serif;
+}
+
+.label_style{
+    display:flex;
+    flex-direction: column;
+    font-size: 18px;
+    height: 5rem;
+    margin-top: 15px;
+    font-family: 'Mulish', sans-serif;
+}
+
+.input_style{
+    border: none;
+    border-bottom:2px solid rgba(103, 128, 159, 0.3);
+    outline: none; 
+    height: 70%;
+    color: grey;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+.input_style:focus{
+    border-bottom:2px solid rgba(103, 128, 159, 1);
+    background-color: rgba(103, 128, 159, 0.1);
+}
+
+.select_style{
+    border: none;
+    border-bottom:2px solid rgba(103, 128, 159, 0.3);
+    outline: none; 
+    height: 70%;
+    color: grey;
+    padding-left: 5px;
+    font-size: 18px;
+    border-radius: 0px;
+    margin-bottom: 0px;
 }
     

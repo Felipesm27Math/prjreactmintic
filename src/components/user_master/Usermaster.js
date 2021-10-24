@@ -160,30 +160,30 @@ const FormNuevo = ({showForm, close, ejecutarConsulta})=>{
                 <div onClick={(e) => e.stopPropagation()} className="formUser">
                     <form onSubmit={submitForm} ref={formRef} className="formularioUsuarios">
                         <h2>Formulario de Registro</h2>
-                        <label htmlFor="user">
+                        <label htmlFor="user" className="label_style">
                             User
-                            <input type="text" name="user" placeholder="Usuario" required/>
+                            <input type="text" name="user" placeholder="Usuario" className="input_style" required/>
                         </label>
-                        <label htmlFor="name">
+                        <label htmlFor="name" className="label_style">
                             Name
-                            <input type="text" name="name" placeholder="Nombre" required/>
+                            <input type="text" name="name" placeholder="Nombre" className="input_style" required/>
                         </label>
-                        <label htmlFor="email">
+                        <label htmlFor="email" className="label_style">
                             Email
-                            <input type="text" name="email" placeholder="Email" required/>
+                            <input type="text" name="email" placeholder="Email" className="input_style" required/>
                         </label>
-                        <label htmlFor="state">
+                        <label htmlFor="state" className="label_style">
                             State
-                           <select name="state" defaultValue={0} required>
-                                <option value={0} disabled>Select an state</option>
+                           <select name="state" defaultValue={0} className="select_style" required>
+                                <option value={0} disabled selected>Select an state</option>
                                 <option>Active</option>
                                 <option>Inactive</option>
                            </select>
                         </label>
-                        <label htmlFor="rol">
+                        <label htmlFor="rol" className="label_style">
                             Rol
-                           <select name="rol" defaultValue={0} required>
-                                <option value={0} disabled>Select an rol</option>
+                           <select name="rol" defaultValue={0} className="select_style" required>
+                                <option value={0} disabled selected>Select an rol</option>
                                 <option>Admi</option>
                                 <option>Seller</option>
                            </select>
