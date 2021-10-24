@@ -3,6 +3,7 @@ import { useRef} from 'react';
 import { obtenerUsuarios, crearUsuario } from '../../utils/api';
 import { nanoid } from 'nanoid';
 import Tooltip from '@mui/material/Tooltip';
+import  Dialog  from '@mui/material/Dialog';
 import Navbar from '../navbar/Navbar';
 import './style.css';
 
@@ -95,6 +96,15 @@ const Tabla = ({listaUser})=>{
 }
 
 const FilaTabla = ({listaVendedores})=>{
+    const [confirmarEliminarUsuario, setConfirmarEliminarusuario] = useState(false)
+    
+    useEffect(()=>{
+        console.log(confirmarEliminarUsuario)
+    }, [confirmarEliminarUsuario])
+    
+    const eliminarUsuario = () =>{
+        console.log("eliminando")
+    }
     return(
         <tr>
             <td>{listaVendedores._id}</td>
@@ -108,8 +118,17 @@ const FilaTabla = ({listaVendedores})=>{
                     <i className="far fa-edit"></i>
                 </Tooltip>
                 <Tooltip title="Eliminar Usuario" arrow>
-                    <i className="far fa-trash-alt"></i>
+                    <i onClick = {()=>{setConfirmarEliminarusuario(!confirmarEliminarUsuario)}}className="far fa-trash-alt"></i>
                 </Tooltip>
+                <Dialog open={confirmarEliminarUsuario}>
+                    <div className="dialogo_style">
+                        <h3>Are you sure to Delete this property?</h3>  
+                        <div>
+                            <button onClick={()=>{eliminarUsuario()}} className="btn-dialog btn-dialog-yes" >Yes</button>
+                            <button onClick={()=>setConfirmarEliminarusuario(false)} className="btn-dialog btn-dialog-no">No</button>
+                        </div>  
+                    </div>
+                </Dialog>
             </td>
             
         </tr>
