@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useRef} from 'react';
-import { obtenerUsuarios } from '../../utils/api';
+import { obtenerUsuarios, crearUsuario } from '../../utils/api';
 import { nanoid } from 'nanoid';
 import Tooltip from '@mui/material/Tooltip';
 import Navbar from '../navbar/Navbar';
@@ -37,7 +37,6 @@ const Usermaster = () => {
 
     useEffect(()=>{
         if(showTabla){
-            console.log()
             setNameBtn("Agregar Usuario")
         }else{
             setNameBtn("Mostrar Usuarios")
@@ -56,7 +55,7 @@ const Usermaster = () => {
                     }}
                 className="btn_crear">{nameBtn}</button>
             </div>
-            <FormNuevo showForm={showForm} close={Toggle}/>
+            <FormNuevo showForm={showForm} close={Toggle} ejecutarConsulta={setEjecutarConsulta}/>
             <div className="block__busqueda">
                 <h4>Que usuario deseas editar?</h4>
             </div>
@@ -117,11 +116,39 @@ const FilaTabla = ({listaVendedores})=>{
     )
 }
 
-const FormNuevo = ({showForm, close})=>{
+const FormNuevo = ({showForm, close, ejecutarConsulta})=>{
     const formRef = useRef(null);
 
-    const submitForm = ()=>{
+    const submitForm = async (event)=>{
+        event.preventDefault();
+        console.log("funcionando")
+        const fd = new FormData(formRef.current);
+
+        const nuevoUser = {}
+
+        fd.forEach((value, key)=>{
+            nuevoUser[key] = value;
+        })
+        
         //codigo para enviar formulario
+        await crearUsuario(
+            {
+                user: nuevoUser.user,
+                name: nuevoUser.name,
+                email : nuevoUser.email,
+                state : nuevoUser.state,
+                rol: nuevoUser.rol
+            },
+            (response)=>{
+                console.log(response.data)
+            },
+            
+            (error)=>{
+                console.log("salio este error", error)
+            })
+
+            close()
+            ejecutarConsulta(true);
     }
 
     return(
@@ -131,12 +158,37 @@ const FormNuevo = ({showForm, close})=>{
 
             <div className="formCont" onClick={()=>{close()}}>
                 <div onClick={(e) => e.stopPropagation()} className="formUser">
-                    <form onSubmit={submitForm} ref={formRef} className="fromularioUsuarios">
-                        <h2>Añadir Nuevo Usuario</h2>
+                    <form onSubmit={submitForm} ref={formRef} className="formularioUsuarios">
+                        <h2>Formulario de Registro</h2>
                         <label htmlFor="user">
-                            usuario
-                            <input type="text" name="user" placeholder="nombreUsuario" required/>
+                            User
+                            <input type="text" name="user" placeholder="Usuario" required/>
                         </label>
+                        <label htmlFor="name">
+                            Name
+                            <input type="text" name="name" placeholder="Nombre" required/>
+                        </label>
+                        <label htmlFor="email">
+                            Email
+                            <input type="text" name="email" placeholder="Email" required/>
+                        </label>
+                        <label htmlFor="state">
+                            State
+                           <select name="state" defaultValue={0} required>
+                                <option value={0} disabled>Select an state</option>
+                                <option>Active</option>
+                                <option>Inactive</option>
+                           </select>
+                        </label>
+                        <label htmlFor="rol">
+                            Rol
+                           <select name="rol" defaultValue={0} required>
+                                <option value={0} disabled>Select an rol</option>
+                                <option>Admi</option>
+                                <option>Seller</option>
+                           </select>
+                        </label>
+                        <button type="submit">Register</button>
                     </form>
                 </div>
             </div>
