@@ -14,3 +14,13 @@ export const crearUsuario = async(data, successCallback, errorCallback)=>{
     };
     await axios.request(options).then(successCallback).catch(errorCallback);
 }
+
+export const eliminarUsuario = async(id, successCallback, errorCallback)=>{
+    const options = {
+        method: 'DELETE',
+        url: `http://localhost:4000/vendedor/${id}/`,
+        headers: {'Content-Type': 'application/json'},
+      };
+      
+    await axios.request(options).then(successCallback).catch(errorCallback);
+}

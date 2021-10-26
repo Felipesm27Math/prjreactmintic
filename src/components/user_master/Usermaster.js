@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useRef} from 'react';
-import { obtenerUsuarios, crearUsuario } from '../../utils/api';
+import { obtenerUsuarios, crearUsuario, eliminarUsuario } from '../../utils/api';
 import { nanoid } from 'nanoid';
 import Tooltip from '@mui/material/Tooltip';
 import  Dialog  from '@mui/material/Dialog';
@@ -61,14 +61,14 @@ const Usermaster = () => {
                 <h4>Que usuario deseas editar?</h4>
             </div>
             <div className="block__tabla">
-                    <Tabla listaUser ={user}/>
+                    <Tabla listaUser ={user} ejecutarConsulta={setEjecutarConsulta}/>
             </div>
             </section> 
         </>
     )
 }
 
-const Tabla = ({listaUser})=>{
+const Tabla = ({listaUser, ejecutarConsulta})=>{
     return(
         <table>
             <thead>
@@ -86,7 +86,7 @@ const Tabla = ({listaUser})=>{
                 {
                     listaUser.map((vendedor)=>{
                         return(
-                            <FilaTabla key={nanoid} listaVendedores = {vendedor}/>
+                            <FilaTabla key={nanoid} listaVendedores = {vendedor} ejecutarConsulta={ejecutarConsulta}/>
                         )
                     })
                 }
@@ -95,16 +95,30 @@ const Tabla = ({listaUser})=>{
     )
 }
 
-const FilaTabla = ({listaVendedores})=>{
+const FilaTabla = ({listaVendedores, ejecutarConsulta})=>{
     const [confirmarEliminarUsuario, setConfirmarEliminarusuario] = useState(false)
-    
+    const [editar, setEditar] = useState(false);
+
     useEffect(()=>{
         console.log(confirmarEliminarUsuario)
     }, [confirmarEliminarUsuario])
     
-    const eliminarUsuario = () =>{
-        console.log("eliminando")
+    const deleteUsuario = async () =>{
+        
+        
+        await eliminarUsuario(listaVendedores._id,
+            (response)=>{
+                console.log(response.data)
+            },
+            (error)=>{
+                console.log(error)
+            })
+            console.log("eliminando")
+            setConfirmarEliminarusuario(false)
+            ejecutarConsulta(true)
+
     }
+
     return(
         <tr>
             <td>{listaVendedores._id}</td>
@@ -124,7 +138,7 @@ const FilaTabla = ({listaVendedores})=>{
                     <div className="dialogo_style">
                         <h3>Are you sure to Delete this property?</h3>  
                         <div>
-                            <button onClick={()=>{eliminarUsuario()}} className="btn-dialog btn-dialog-yes" >Yes</button>
+                            <button onClick={()=>{deleteUsuario()}} className="btn-dialog btn-dialog-yes" >Yes</button>
                             <button onClick={()=>setConfirmarEliminarusuario(false)} className="btn-dialog btn-dialog-no">No</button>
                         </div>  
                     </div>
