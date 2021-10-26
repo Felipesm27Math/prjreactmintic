@@ -56,7 +56,7 @@ const Usermaster = () => {
                     }}
                 className="btn_crear">{nameBtn}</button>
             </div>
-            <FormNuevo showForm={showForm} close={Toggle} ejecutarConsulta={setEjecutarConsulta}/>
+            <FormNuevo showForm={showForm} close={Toggle} ejecutarConsulta={setEjecutarConsulta} showTabla={setShowTabla}/>
             <div className="block__busqueda">
                 <h4>Que usuario deseas editar?</h4>
             </div>
@@ -149,7 +149,7 @@ const FilaTabla = ({listaVendedores, ejecutarConsulta})=>{
     )
 }
 
-const FormNuevo = ({showForm, close, ejecutarConsulta})=>{
+const FormNuevo = ({showForm, close, ejecutarConsulta, showTabla})=>{
     const formRef = useRef(null);
 
     const submitForm = async (event)=>{
@@ -180,6 +180,7 @@ const FormNuevo = ({showForm, close, ejecutarConsulta})=>{
                 console.log("salio este error", error)
             })
 
+            showTabla(true)
             close()
             ejecutarConsulta(true);
     }
