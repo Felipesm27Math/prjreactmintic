@@ -98,6 +98,9 @@ const Tabla = ({listaUser, ejecutarConsulta})=>{
 const FilaTabla = ({listaVendedores, ejecutarConsulta})=>{
     const [confirmarEliminarUsuario, setConfirmarEliminarusuario] = useState(false)
     const [editar, setEditar] = useState(false);
+    const [infoVendedor, setInfoVendedor] = useState({
+        user : listaVendedores.user,
+    })
 
     useEffect(()=>{
         console.log(confirmarEliminarUsuario)
@@ -120,32 +123,58 @@ const FilaTabla = ({listaVendedores, ejecutarConsulta})=>{
     }
 
     return(
-        <tr>
+        <>
+
+        {editar ? 
+        
+        (<tr>
             <td>{listaVendedores._id}</td>
-            <td>{listaVendedores.user}</td>
-            <td>{listaVendedores.name}</td>
-            <td>{listaVendedores.email}</td>
-            <td>{listaVendedores.state}</td>
-            <td>{listaVendedores.rol}</td>
-            <td className="actions_style">
-                <Tooltip title="Editar Usuario" arrow>
-                    <i className="far fa-edit"></i>
+            <td><input Value={listaVendedores.user} onChange = {(e)=>{setInfoVendedor({...infoVendedor, user: e.target.value})}}/></td>
+            <td><input Value={listaVendedores.name} onChange = {(e)=>{setInfoVendedor({...infoVendedor, name: e.target.value})}}/></td>
+            <td><input Value={listaVendedores.email}/></td>
+            <td><input Value={listaVendedores.state}/></td>
+            <td><input Value={listaVendedores.rol}/></td>
+            <td>
+                <Tooltip title = "Guardar Cambios">
+                    <i className="far fa-check-circle"></i>
                 </Tooltip>
-                <Tooltip title="Eliminar Usuario" arrow>
-                    <i onClick = {()=>{setConfirmarEliminarusuario(!confirmarEliminarUsuario)}}className="far fa-trash-alt"></i>
+                <Tooltip title = "Cancelar">
+                    <i className="fas fa-times-circle"></i>
                 </Tooltip>
-                <Dialog open={confirmarEliminarUsuario}>
-                    <div className="dialogo_style">
-                        <h3>Are you sure to Delete this property?</h3>  
-                        <div>
-                            <button onClick={()=>{deleteUsuario()}} className="btn-dialog btn-dialog-yes" >Yes</button>
-                            <button onClick={()=>setConfirmarEliminarusuario(false)} className="btn-dialog btn-dialog-no">No</button>
-                        </div>  
-                    </div>
-                </Dialog>
+
             </td>
-            
-        </tr>
+        </tr> )
+        
+        
+        : 
+            (<tr>
+                <td>{listaVendedores._id}</td>
+                <td>{listaVendedores.user}</td>
+                <td>{listaVendedores.name}</td>
+                <td>{listaVendedores.email}</td>
+                <td>{listaVendedores.state}</td>
+                <td>{listaVendedores.rol}</td>
+                <td className="actions_style">
+                    <Tooltip title="Editar Usuario" arrow>
+                        <i onClick = {()=>{setEditar(!editar)}} className="far fa-edit"></i>
+                    </Tooltip>
+                    <Tooltip title="Eliminar Usuario" arrow>
+                        <i onClick = {()=>{setConfirmarEliminarusuario(!confirmarEliminarUsuario)}}className="far fa-trash-alt"></i>
+                    </Tooltip>
+                    <Dialog open={confirmarEliminarUsuario}>
+                        <div className="dialogo_style">
+                            <h3>Are you sure to Delete this property?</h3>  
+                            <div>
+                                <button onClick={()=>{deleteUsuario()}} className="btn-dialog btn-dialog-yes" >Yes</button>
+                                <button onClick={()=>setConfirmarEliminarusuario(false)} className="btn-dialog btn-dialog-no">No</button>
+                            </div>  
+                        </div>
+                    </Dialog>
+                </td>
+                
+            </tr>)
+        }
+        </>
     )
 }
 
